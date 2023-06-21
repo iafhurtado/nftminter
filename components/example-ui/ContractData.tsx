@@ -20,18 +20,15 @@ export const ContractData = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const greetingRef = useRef<HTMLDivElement>(null);
 
-
   const { data: totalCounter } = useScaffoldContractRead({
     contractName: "YourContract",
     functionName: "totalCounter",
   });
- 
 
   const { data: currentGreeting, isLoading: isGreetingLoading } = useScaffoldContractRead({
     contractName: "YourContract",
     functionName: "greeting",
   });
-
 
   useScaffoldEventSubscriber({
     contractName: "YourContract",
