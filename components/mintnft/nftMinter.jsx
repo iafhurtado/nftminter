@@ -1,8 +1,6 @@
 // Import CSS styles, and necessary modules from packages
 // import styles from "../styles/NftMinter.module.css";
 import { useState } from "react";
-import Image from "next/image";
-import Analytical from "../../public/assets/Analytical.JPG";
 import { Contract } from "alchemy-sdk";
 import { useAccount, useSigner } from "wagmi";
 
@@ -42,9 +40,7 @@ export default function NftMinter({ contractAddress, tokenUri, abi }) {
   return (
     <div className="flex flex-col justify-center items-center mt-20 align-middle mx-30 h-screen">
       <div className="max-w-lg w-full bg-white shadow-lg rounded-lg self-center mx-auto">
-        <div className="relative ">
-          <Image src={Analytical} alt="Picture of the author" />
-        </div>
+        <div className="relative "></div>
 
         <div className="p-6 justify-center">
           <h1 className="text-2xl text-stone-800 font-bold mb-2">Mint an NFT</h1>

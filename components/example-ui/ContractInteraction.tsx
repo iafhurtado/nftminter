@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { CopyIcon } from "../example-ui/assets/CopyIcon";
+import { DiamondIcon } from "../example-ui/assets/DiamondIcon";
+import { HareIcon } from "../example-ui/assets/HareIcon";
 import { ArrowDownRightIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
 
@@ -18,6 +21,9 @@ export const ContractInteraction = () => {
 
   return (
     <div className="flex bg-base-300 relative pb-10">
+      <DiamondIcon className="absolute top-24" />
+      <CopyIcon className="absolute bottom-0 left-36" />
+      <HareIcon className="absolute right-0 bottom-24" />
       <div className="flex flex-col w-full mx-5 sm:mx-8 2xl:mx-20">
         <div className={`mt-10 flex gap-2 ${visible ? "" : "invisible"} max-w-2xl`}>
           <div className="flex gap-5 bg-base-200 bg-opacity-50 z-0 p-7 rounded-2xl shadow-lg">
