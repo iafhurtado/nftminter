@@ -1,7 +1,6 @@
-// Import CSS styles, and necessary modules from packages
-// import styles from "../styles/NftMinter.module.css";
 import { useState } from "react";
 import { Contract } from "alchemy-sdk";
+import { ethers } from "ethers";
 import { useAccount, useSigner } from "wagmi";
 
 // NFT Minter component
@@ -23,7 +22,7 @@ export default function NftMinter({ contractAddress, tokenUri, abi }) {
       // Set isMinting to true to show that the transaction is being processed
       setIsMinting(true);
       // Call the smart contract function to mint a new NFT with the provided token URI and the user's address
-      const mintTx = await nftContract.mintNFT(address, tokenUri);
+      const mintTx = await nftContract.mint(1, { value: ethers.utils.parseEther("0.1") });
       // Set the transaction hash in state to display in the UI
       setTxHash(mintTx?.hash);
       // Wait for the transaction to be processed

@@ -1,4 +1,4 @@
-import contract from "../components/mintnft/myNFTABI.json";
+import contract from "../components/mintnft/StandardNFT.json";
 import type { NextPage } from "next";
 import { MetaHeader } from "~~/components/MetaHeader";
 import NftMinter from "~~/components/mintnft/nftMinter";
@@ -16,8 +16,10 @@ const MintNFT: NextPage = () => {
       </MetaHeader>
       <div className="grid flex-grow" data-theme="mintNft">
         <NftMinter
-          contractAddress={"0x73F71a52274cC0D53bf67Aef0Bf34942d77A40cE"}
-          tokenUri={"https://ipfs.io/ipfs/QmXmKy7QcQwX5CFamWsR91eNkb7auGhbPLGrk3t1Mgfbw9?filename=Analytical.JPG"}
+          contractAddress={"0x02296920692125f9a5764145bBAf5dBD2F307455"}
+          tokenUri={
+            "https://ipfs.io/ipfs/QmRXNNHSrfBVcyqSce4S6bpypR6ehLvTo96w1rY6TMgNZ4?filename=dalle%20coffee%202.png"
+          }
           abi={contract.abi}
         />
       </div>
