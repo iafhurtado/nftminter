@@ -22,7 +22,7 @@ export default function NftMinter({ contractAddress, tokenUri, abi }) {
       // Set isMinting to true to show that the transaction is being processed
       setIsMinting(true);
       // Call the smart contract function to mint a new NFT with the provided token URI and the user's address
-      const mintTx = await nftContract.mint(1, { value: ethers.utils.parseEther("0.1") });
+      const mintTx = await nftContract.mint(1, { value: ethers.utils.parseEther("0.01") });
       // Set the transaction hash in state to display in the UI
       setTxHash(mintTx?.hash);
       // Wait for the transaction to be processed
