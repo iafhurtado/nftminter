@@ -14,7 +14,7 @@ export const ContractInteraction = () => {
     functionName: "setGreeting",
     args: [newGreeting],
     value: "0.01",
-    onBlockConfirmation: (txnReceipt: { blockHash: any; }) => {
+    onBlockConfirmation: (txnReceipt: { blockHash: any }) => {
       console.log("📦 Transaction blockHash", txnReceipt.blockHash);
     },
   });
