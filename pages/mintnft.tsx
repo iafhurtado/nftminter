@@ -2,6 +2,7 @@ import contract from "../components/mintnft/StandardNFT.json";
 import type { NextPage } from "next";
 import { MetaHeader } from "~~/components/MetaHeader";
 import NftMinter from "~~/components/mintnft/nftMinter";
+import { NFTData } from "~~/components/mintnft/NFTData";
 
 const MintNFT: NextPage = () => {
   return (

@@ -37,10 +37,8 @@ export default function NftMinter({ contractAddress, tokenUri, abi }) {
     }
   };
   return (
-    <div className="flex flex-col justify-center items-center mt-20 align-middle mx-30 h-screen">
+    <div className="flex flex-col justify-center items-center mt-15 align-middle">
       <div className="max-w-lg w-full bg-white shadow-lg rounded-lg self-center mx-auto">
-        <div className="relative "></div>
-
         <div className="p-6 justify-center">
           <h1 className="text-2xl text-stone-800 font-bold mb-2">Mint an NFT</h1>
           <h3 className="text-gray-600 mb-4">Speedrun Ethereum</h3>
@@ -51,8 +49,8 @@ export default function NftMinter({ contractAddress, tokenUri, abi }) {
           <hr className="my-4" />
           <h3 className="text-xl text-stone-800 font-bold mb-2">INSTRUCTIONS</h3>
           <p className="text-gray-700 mb-4">
-            This NFT is on Goerli Network. You’ll need some test ETH to mint the
-            <a href="https://goerlifaucet.com/">
+            This NFT is on Sepolia Network. You’ll need some test ETH to mint the <br></br>
+            <a className=" text-blue-700" href="https://sepoliafaucet.com/">
               <strong>Get free test ETH</strong>
             </a>
           </p>
