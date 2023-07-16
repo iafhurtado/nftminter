@@ -2,6 +2,8 @@ import contract from "../components/mintnft/StandardNFT.json";
 import type { NextPage } from "next";
 import { MetaHeader } from "~~/components/MetaHeader";
 import NftMinter from "~~/components/mintnft/nftMinter";
+import { MinterData } from "~~/components/mintnft/MinterData";
+
 
 const MintNFT: NextPage = () => {
   return (
@@ -14,7 +16,7 @@ const MintNFT: NextPage = () => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap" rel="stylesheet" />
       </MetaHeader>
-      <div className="grid flex-grow" data-theme="mintNft">
+      <div className="grid lg:grid-cols-2 flex-grow" data-theme="mintNft">
         <NftMinter
           contractAddress={"0x02296920692125f9a5764145bBAf5dBD2F307455"}
           tokenUri={
@@ -22,6 +24,7 @@ const MintNFT: NextPage = () => {
           }
           abi={contract.abi}
         />
+        <MinterData />
       </div>
     </>
   );
