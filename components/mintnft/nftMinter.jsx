@@ -71,7 +71,7 @@ export default function NftMinter({ contractAddress, tokenUri, abi }) {
               <h3 className=" font-semibold text-base-300 text-sm mb-1">TX ADDRESS</h3>
               <a
                 className=" text-blue-700 font-bold"
-                href={`https://goerli.etherscan.io/tx/${txHash}`}
+                href={`https://sepolia.etherscan.io/tx/${txHash}`}
                 target="_blank"
                 rel="noreferrer"
               >

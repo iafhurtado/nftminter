@@ -24,21 +24,24 @@ export const MinterData = () => {
 
   useEffect(() => {
     if (tokenURI) {
-      fetch(tokenURI)
-        .then((res) => res.blob()) // Use res.blob() to get the image data as a Blob
-        .then((blob) => {
+      fetch(tokenURI as RequestInfo)
+        .then(res => res.blob()) // Use res.blob() to get the image data as a Blob
+        .then(blob => {
           const imageURL = URL.createObjectURL(blob); // Create a temporary URL for the image data
           setImageHash(imageURL);
         })
-        .catch((error) => {
+        .catch(error => {
           console.error("Error fetching tokenURI:", error);
         });
     }
   }, [tokenURI]);
 
   useEffect(() => {
-    if (totalSupply) {
-      setContractTotalSupply(totalSupply.toNumber());
+    if (totalSupply !== undefined) {
+      const supply = Number(totalSupply);
+      if (!isNaN(supply)) {
+        setContractTotalSupply(supply);
+      }
     }
   }, [totalSupply]);
 
